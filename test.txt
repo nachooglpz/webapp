@@ -1,0 +1,19 @@
+student_john = Student(first_name = 'John', last_name = 'Doe', 
+                        email = 'jd@example.com', age = 23, 
+                        bio = 'Biology student')
+
+student_nacho = Student(first_name = 'nacho', last_name = 'gomez', 
+                        email = 'nacho@example.com', age = 19, 
+                        bio = 'CS student')
+
+student_alett = Student(first_name = 'alett', last_name = 'oliva', 
+                        email = 'alett@example.com', age = 4, 
+                        bio = 'me gustan las de 23')
+
+student_dieguito = Student(first_name = 'diego', last_name = 'navarro', 
+                        email = 'dieguito@example.com', age = 3, 
+                        bio = 'entre menos estables mas me gustan')
+
+student_willy = Student(first_name = 'willy', last_name = 'sainz', 
+                        email = 'willy@example.com', age = 20, 
+                        bio = 'uwu')

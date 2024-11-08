@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:test@localhost:3306/mydb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:test@127.0.0.1:3306/mydb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -29,3 +29,9 @@ def hello_world():
 @app.route("/usuario/<name>")
 def hello_usuario(name):
     return f"<p>Hello, {name}!</p>"
+
+@app.route("/estudiantes")
+def estudiantes():
+     students = Student.query.all()
+     #return students[0].first_name + " " + students[1].first_name + " " + students[2].first_name + " " + students[3].first_name + " " + students[4].first_name
+     return render_template("estudiantes.html", students = students)
